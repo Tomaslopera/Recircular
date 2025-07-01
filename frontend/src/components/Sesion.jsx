@@ -56,6 +56,7 @@ const Sesion = () => {
                 <ContentSesion inLogin={inLogin} />
             </Contenedor>
         </Fondo>
+        
     )
 }
 

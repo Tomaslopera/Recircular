@@ -27,7 +27,6 @@ def get_users():
     return conn.execute(user_table.select()).fetchall()
 
 
-# Mostrar un Usuario
 @user.get(
     "/users/{id}",
     tags=["users"],
@@ -35,7 +34,7 @@ def get_users():
 )
 def get_user(id: str):
     try:
-        consulta = text("SELECT username FROM user WHERE user.id = :id")
+        consulta = text("SELECT first_name, last_name FROM user WHERE user.id = :id")
         user_return = session.execute(consulta, {"id" : id}).fetchone()[0]
         if user_return is not None:
             return user_return

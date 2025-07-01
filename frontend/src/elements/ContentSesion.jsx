@@ -69,6 +69,7 @@ const Boton = styled.button`
 `
 
 
+
 const ContentSesion = ({ inLogin }) => {
     // Tamaño de la pantalla
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);

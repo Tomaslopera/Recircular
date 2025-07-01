@@ -25,6 +25,7 @@ const GridBox= () => {
                 newMessage("Inténtelo más tarde", "error");
             }
         }
+        
         obtenerProductos();
     }, [getAllProducts]);
 

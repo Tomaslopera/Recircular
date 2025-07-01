@@ -172,21 +172,6 @@ export const UserContextProvider = (props) => {
         }
     }
 
-    const searchProduct = async ( busqueda ) => {
-        try {
-            const response = await axios.get(`${API_BASE_URL}/search/products/` + busqueda)
-
-            if (response.data == null)  return "No existen productos";
-
-            const productos = response.data;
-            
-            return productos;
-        } catch (error) {
-            console.error(error)
-            console.log("Intentelo más tarde")
-        }
-    }
-
     const getProduct = async () => {
         try {
             const id = localStorage.getItem("idProducto");
@@ -203,6 +188,7 @@ export const UserContextProvider = (props) => {
             console.log("Intentelo más tarde")
         }
     }
+
 
     const getAllProducts = async () => {
         try {
@@ -231,7 +217,7 @@ export const UserContextProvider = (props) => {
                 setUser,
                 addProduct,
                 change_password,
-                searchProduct,
+                // searchProduct,
                 getAllProducts,
                 getProduct,
                 nombreUsuario,
